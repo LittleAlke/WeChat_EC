@@ -1,0 +1,47 @@
+{
+  "pages":[
+    "pages/home/index",
+    "pages/category/index",
+    "pages/cart/index",
+    "pages/me/index"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fbf9fe",
+    "navigationBarTitleText": "利威尔",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "color": "#959594",
+    "selectedColor": "#e93b3d",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/home/index",
+        "iconPath": "image/tabBar/home.png",
+        "selectedIconPath": "image/tabBar/home_red.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/category/index",
+        "iconPath": "image/tabBar/category.png",
+        "selectedIconPath": "image/tabBar/category_red.png",
+        "text": "分类"
+      },
+      {
+        "pagePath": "pages/cart/index",
+        "iconPath": "image/tabBar/cart.png",
+        "selectedIconPath": "image/tabBar/cart_red.png",
+        "text": "购物车"
+      },
+      {
+        "pagePath": "pages/me/index",
+        "iconPath": "image/tabBar/me.png",
+        "selectedIconPath": "image/tabBar/me_red.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}
