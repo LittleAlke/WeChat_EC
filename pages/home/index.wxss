@@ -1,1 +1,37 @@
 /* pages/home/index.wxss */
+.search{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 60rpx;
+}
+
+.widgets-img{
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.search .scan{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 10%;
+}
+
+.search .search-input{
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 80%;
+  border-radius: 10px;
+  align-items: center;
+  color: skyblue;
+  padding: 5rpx;
+  background-color: #fbf9fe;
+}
+
+.search-icon{
+  margin-right: 20rpx;
+  width: 30rpx;
+  height: 30rpx;
+}

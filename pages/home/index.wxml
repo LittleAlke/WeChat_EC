@@ -1,2 +1,16 @@
-<!--pages/home/index.wxml-->
-<text>pages/home/index.wxml</text>
+<!-- scan search input dialogue -->
+<view class="search">
+  <view class="scan">
+    <image class="widgets-img" src="/image/public/scan.png"></image>
+  </view>
+
+  <view class="search-input">
+    <image class="widgets-img search-icon" src="/image/public/search.png"></image>
+    <input type="text" placeholder="搜索商品信息..."/>
+  </view>
+
+  <view class="scan">
+    <image class="widgets-img" src="/image/public/dialogue.png"></image>
+  </view>
+
+</view>

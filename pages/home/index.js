@@ -1,18 +1,44 @@
 // pages/home/index.js
+const interfaces = require('../../utils/urlconfig')
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    swipers:[],
+    logos:[],
+    pageRow:[],
+    quicks:[]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    const self = this;
+    // 加载中
+    wx.showLoading({
+      title: '加载中',
+    })
 
+    wx.request({
+      url: interfaces.homepage,
+      header:{
+        'content-type':"application/json"
+      },
+      success(res){
+        // 隐藏加载动画
+        wx.hideLoading()
+        self.setData({
+          swipers:res.data.swipers,
+          logos:res.data.logos,
+          pageRow:res.data.pageRow,
+          quicks:res.data.quicks
+        })
+        console.log(self.data);
+      }
+    })
   },
 
   /**
