@@ -1,4 +1,6 @@
 <!-- scan search input dialogue -->
+<!-- <view class="container"> -->
+<!-- 头部 -->
 <view class="search">
   <view class="scan">
     <image class="widgets-img" src="/image/public/scan.png"></image>
@@ -6,11 +8,28 @@
 
   <view class="search-input">
     <image class="widgets-img search-icon" src="/image/public/search.png"></image>
-    <input type="text" placeholder="搜索商品信息..."/>
+    <input type="text" placeholder="搜索商品信息..." />
   </view>
 
   <view class="scan">
     <image class="widgets-img" src="/image/public/dialogue.png"></image>
   </view>
-
 </view>
+
+<!-- 轮播图 -->
+<scroll-view class="content-scroll">
+  <view class="indicator-wrap">
+    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}"
+      vertical="{{vertical}}" circular="true" indicator-color="rgba(255,0,255,.3)" indicator-active-color="#fff"
+      style="width:100%;height:325rpx">
+      <block wx:for="{{swipers}}" wx:key="key">
+        <swiper-item>
+          <image class="swiper-item" src="{{item.image}}" mode="aspectFill"></image>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+</scroll-view>
+
+
+<!-- </view> -->

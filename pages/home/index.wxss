@@ -1,4 +1,5 @@
 /* pages/home/index.wxss */
+/* 头部 */
 .search{
   display: flex;
   flex-direction: row;
@@ -34,4 +35,24 @@
   margin-right: 20rpx;
   width: 30rpx;
   height: 30rpx;
+}
+
+/* 轮播 */
+.content-scroll{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 20rpx;
+}
+
+.indicator-wrap{
+  width: 100%;
+  height: auto;
+}
+
+.swiper-item{
+  display: block;
+  width: 100%;
+  height: 325rpx;
 }

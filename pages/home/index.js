@@ -9,7 +9,12 @@ Page({
     swipers:[],
     logos:[],
     pageRow:[],
-    quicks:[]
+    quicks:[],
+    indicatorDots: true,
+    vertical: false,
+    autoplay: true,
+    interval: 3000,
+    duration: 500
   },
 
   /**
@@ -36,7 +41,7 @@ Page({
           pageRow:res.data.pageRow,
           quicks:res.data.quicks
         })
-        console.log(self.data);
+        console.log(self.data.swipers[0]);
       }
     })
   },
