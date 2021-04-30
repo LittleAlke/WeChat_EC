@@ -31,5 +31,45 @@
   </view>
 </scroll-view>
 
+<!-- 图标分类 -->
+<view class="logos">
+  <block wx:for="{{logos}}" wx:key="index">
+    <view class="logoInfo">
+      <image src="{{item.image}}" style="width:100rpx;height:100rpx;" mode="aspectFit"></image>
+      <text class="logoText">{{item.title}}</text>
+    </view>
+  </block>
+</view>
+
+<!-- 掌上秒杀 -->
+<view class="flash-container">
+  <!-- 头部 -->
+  <view class="flash-row">
+    <image class="flash-sale" src="/image/public/flash-sale.png" mode="aspectFill"></image>
+    <view class="flash-more">
+      <text>更多秒杀</text>
+      <image src="/image/public/arrow-right.png" mode="aspectFill"></image>
+    </view>
+  </view>
+  <!-- 可滚动区域 -->
+  <scroll-view class="flash-scroll" scroll-x="true">
+    <block wx:for="{{quicks}}" wx:key="index">
+      <view style="display:inline-block;">
+        <view class="flash-column">
+          <image src="{{item.image}}" mode="aspectFill"></image>
+          <text>{{item.price}}</text>
+        </view>
+      </view>
+    </block>
+  </scroll-view>
+</view>
+
+<!-- 底部结构 -->
+<block wx:for="{{pageRow}}" wx:for-index="idx" wx:for-item="page" wx:key="index">
+  <view class="page-row">
+    <image class="page-img" wx:for="{{page}}" src="{{item}}" wx:key="index" mode="aspectFill"></image>
+  </view>
+</block>
+
 
 <!-- </view> -->

@@ -1,1 +1,79 @@
 /* pages/category/index.wxss */
+/* 分类样式 */
+.category{
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+
+.nav-left{
+  background-color: rgb(245, 245, 237);
+  width: 24%;
+  height: 100%;
+  white-space: nowrap;
+}
+
+.nav-right{
+  width: 76%;
+  height: 100%;
+  background-color: #fff;
+}
+
+::-webkit-scrollbar{
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+
+.nav-left-items{
+  font-size: 28rpx;
+  color: #333;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+}
+
+/* 选中样式 */
+.nav-left-item-active{
+  background-color: #fff;
+  color: #e93b3d;
+}
+
+/* 右侧样式 */
+.ms-category{
+  margin: 40rpx 16rpx 0;
+  float: left;
+}
+/* 分类区域的标题 */
+.ms-category .title{
+  font-size: 28rpx;
+  height: 60rpx;
+  line-height: 30rpx;
+  font-weight: 700;
+  color: #080808;
+}
+/* 分类区域 */
+.ms-category-wrap{
+  overflow: hidden;
+  padding: 20rpx 20rpx 0;
+}
+/* 分类区域内图片和文字 */
+.ms-category-style{
+  width: 32.8%;
+  float: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.list-img{
+  width: 150rpx;
+  height: 150rpx;
+}
+
+.list-text{
+  text-align: center;
+  font-size: 24rpx;
+  color: #686868;
+  margin-top: 10rpx;
+  height: 70rpx;
+}

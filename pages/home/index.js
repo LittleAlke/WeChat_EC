@@ -41,7 +41,7 @@ Page({
           pageRow:res.data.pageRow,
           quicks:res.data.quicks
         })
-        console.log(self.data.swipers[0]);
+        // console.log(self.data);
       }
     })
   },

@@ -1,5 +1,11 @@
 /* pages/home/index.wxss */
 /* 头部 */
+/* .container{
+  background-color: skyblue;
+  display: flex;
+  flex-direction: column;
+} */
+
 .search{
   display: flex;
   flex-direction: row;
@@ -39,7 +45,7 @@
 
 /* 轮播 */
 .content-scroll{
-  height: 100%;
+  /* height: 100%; */
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -56,3 +62,109 @@
   width: 100%;
   height: 325rpx;
 }
+
+/* 图标分类 */
+.logos{
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  padding-top: 20px;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  /* background-color: #356068; */
+  background-color: rgb(245, 245, 237);
+  
+}
+
+.logoInfo{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 150rpx;
+  height: 150rpx;
+}
+
+.logoText{
+  color: #aaa;
+  font-size: 23rpx;
+}
+
+/* 掌上秒杀 */
+.flash-container{
+  box-sizing: border-box;
+  padding: 20rpx;
+  margin-top: 20rpx;
+  /* background-color: #356068;*/
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.flash-row{
+  display: flex; 
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.flash-sale{
+  width: 180rpx;
+  height: 40rpx;
+}
+
+.flash-more{
+  height: 40rpx;
+}
+
+.flash-more text{
+  margin-right: 2rpx;
+  font-size: 22rpx;
+  color: #aaa;
+}
+
+.flash-more image{
+  width: 25rpx;
+  height: 25rpx;
+}
+
+/* 可滚动区域 */
+.flash-scroll{
+  width: 100%;
+  margin-top: 10rpx;
+  white-space: nowrap;
+}
+
+.flash-column{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20rpx;
+}
+
+.flash-column image{
+  height: 170rpx;
+  width: 170rpx;
+}
+
+.flash-column text{
+  font-size: 32rpx;
+  font-weight: 800;
+  color: #db1313;
+  margin-top: 10rpx;
+}
+
+/* 底部结构 */
+.page-row{
+  display: flex;
+  flex-direction: row;
+}
+
+.page-row .page-img{
+  min-width: 240rpx;
+  max-width: 375rpx;
+  min-height: 202rpx;
+  max-height: 292rpx;
+}
+
