@@ -1,0 +1,31 @@
+<!--pages/list/index.wxml-->
+<view class="proList">
+  <block wx:for="{{proList}}" wx:key="index">
+    <view class="proList-item" bindtap="switchProlistDetail" data-index="{{index}}">
+      <!-- 图片 -->
+      <view class="proList-cover">
+        <image class="ms-image" src="{{item.cover}}"></image>
+      </view>
+      <!-- 商品信息 -->
+      <view class="proList-info">
+        <!-- 名称 -->
+        <view class="proList-title">
+          <text>{{item.title}}</text>
+        </view>
+        <!-- 价格 -->
+        <view class="proList-price">
+          <text>￥ {{item.price}}</text>
+        </view>
+        <!-- 评价 -->
+        <view class="proList-other">
+          <text class="proList-comment">{{item.comment}}条评价</text>
+          <text class="proList-rate">好评率{{item.rate}}</text>
+        </view>
+      </view>
+    </view>
+
+  </block>
+  <view class="endView" wx:if="{{noData}}">
+    <text>没有更多数据了...</text>
+  </view>
+</view>

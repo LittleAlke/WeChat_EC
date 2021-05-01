@@ -1,0 +1,29 @@
+<!--pages/detail/index.wxml-->
+<view class="detail">
+  <!-- 图片轮播 -->
+  <view class="slider">
+    <swiper indicator-dots="true" indicator-color="rgba(255,255,255,.6)" indicator-active-color="#e93b3d"
+    style="width:100%;height:820rpx;">
+      <block wx:for="{{partData.loopImgUrl}}" wx:key="index">
+        <swiper-item>
+          <image class="swiper-item" src="{{item}}"></image>
+        </swiper-item>
+      </block>
+    
+    </swiper>
+  </view>
+  <!-- 商品信息 -->
+  <view class="proinfo">
+    <view class="text-wrap">
+      <text>{{partData.title}}</text>
+    </view>
+    <view class="price-wrap">
+      <text>{{partData.price}}</text>
+    </view>
+  </view>
+  <!-- 支付 -->
+  <infocell title="支付" desc="{{baitiaoSelectItem.desc}}" bind:handlePopView="handleBaitiaoView"></infocell>
+  <!-- 已选 -->
+  <infocell title="已选" desc="{{partData.count}}件" bind:handlePopView="handleCountView"></infocell>
+  
+</view>

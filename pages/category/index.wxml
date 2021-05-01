@@ -15,8 +15,8 @@
           <view class="title">{{item.title}}</view>
           <view class="ms-category-warp">
             <block wx:for="{{item.desc}}" wx:key="index" wx:for-item="list">
-              <view class="ms-category-style">
-                <image class="list-img" src="{{list.img}}" mode="aspectFit"></image>
+              <view class="ms-category-style" bindtap="showListView" data-txt="{{list.text}}">
+                <image class="list-img" src="{{list.img}}" mode="aspectFit" ></image>
                 <text class="list-text">{{list.text}}</text>
               </view>
             </block>

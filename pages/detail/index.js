@@ -1,4 +1,4 @@
-// pages/category/index.js
+// pages/detail/index.js
 const interfaces = require("../../utils/urlconfig")
 Page({
 
@@ -6,23 +6,19 @@ Page({
    * 页面的初始数据
    */
   data: {
-    navLeftItems: [],
-    navRightItems: [],
-    curIndex: 0
-  },
-  showListView(e){
-    // console.log(e.currentTarget.dataset.txt);
-    let txt = e.currentTarget.dataset.txt
-    // 页面跳转
-    wx.navigateTo({
-      url: '/pages/list/index?title='+txt,
-    })
+    baitiao: [],
+    partData: [],
+    baitiaoSelectItem:{
+      desc:"【白条支付】首单享立减优惠"
+    }
   },
 
-  switchTab(e){
-    this.setData({
-      curIndex: e.currentTarget.dataset.index
-    })
+  handleBaitiaoView(){
+    console.log("白条");
+  },
+
+  handleCountView(){
+    console.log("count");
   },
 
   /**
@@ -30,29 +26,28 @@ Page({
    */
   onLoad: function (options) {
     const self = this;
+    // console.log(options);
+    const id = options.id;
     wx.showLoading({
       title: '加载中...',
     })
-    
     wx.request({
-      url: interfaces.productions,
-      header:{
-        "content-type":"application/json"
-      },
+      url: interfaces.productionsDetail,
       success(res){
+        console.log(res.data);
+        let result = null;
+        res.data.forEach(element => {
+          if (element.partData.id==id) {
+            result = element
+          }
+        });
         self.setData({
-          navLeftItems: res.data.navLeftItems,
-          navRightItems: res.data.navRightItems
+          baitiao:result.baitiao,
+          partData:result.partData
         })
-        console.log(self.data);
         wx.hideLoading()
       }
-
     })
-
-
-
-
   },
 
   /**
