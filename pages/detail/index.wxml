@@ -25,5 +25,23 @@
   <infocell title="支付" desc="{{baitiaoSelectItem.desc}}" bind:handlePopView="handleBaitiaoView"></infocell>
   <!-- 已选 -->
   <infocell title="已选" desc="{{partData.count}}件" bind:handlePopView="handleCountView"></infocell>
+
+  <!-- 分期弹框 -->
+  <IOU bind:updateSelect="handleUpdate" baitiao="{{baitiao}}" hideBaitiao="{{hideBaitiao}}"></IOU>
+
+  <!-- 选择商品弹窗 -->
+  <countcell bind:handleAddToCart="addToCart" bind:onHandleInput="updateCount" partData="{{partData}}" hideSelectItem="{{hideSelectItem}}"></countcell>
+
+  <!-- 底部加入购物车 -->
+  <view class="btn-bar">
+    <view class="icon-cart" catchtap="handleCartView">
+      <text class="badge" wx:if="{{badgeCount>0}}">{{badgeCount}}</text>
+      <image src="/image/public/cart.png"></image>
+      <text>购物车</text>
+    </view>
+    <view class="cart-btn">
+      <button bindtap="addToCart">加入购物车</button>
+    </view>
+  </view>
   
 </view>
